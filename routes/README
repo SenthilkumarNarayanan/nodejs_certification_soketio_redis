@@ -1,0 +1,6 @@
+//to check redis hit http://localhost:5000/country/test-redis
+{"message":"Redis is working!","value":"Hello Redis!"}
+//on redis cli
+127.0.0.1:6379> GET my-test-key
+"Hello Redis!"
+127.0.0.1:6379>
