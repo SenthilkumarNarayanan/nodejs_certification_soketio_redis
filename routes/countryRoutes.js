@@ -1,5 +1,6 @@
 import express from "express";
 import redisClient from "../config/redisClient.js"; // import redis client
+import getCountryInfo from "../controller/getCountryInfo.js";
 
 const router = express.Router();
 
@@ -20,5 +21,6 @@ router.get("/test-redis", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+router.get("/:country", getCountryInfo);
 
 export default router;
